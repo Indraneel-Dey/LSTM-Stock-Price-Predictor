@@ -52,7 +52,7 @@ st.title('Stock Price Forecasting')
 st.write('Select the company whose closing stock price you wish to forecast')
 company = st.selectbox('Select the company', ['TCS', 'Nestle', 'Ultratech'])
 st.write('Enter the number of days after 12 August 2022 for which you wish to forecast')
-days = int(st.text_input('Days', '30'))
+days = st.number_input('Days', min_value=10)
 if st.button('Forecast'):
     if company == 'TCS':
         st.set_option('deprecation.showPyplotGlobalUse', False)
